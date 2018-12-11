@@ -1,1 +1,50 @@
 
+def print_list(items, header=None):
+    if header != None:
+        print(header)
+    for item in (items):
+        print(str(item))
+    print()
+def first(items, header=None):
+    if header != None:
+        print(header)
+    for item in (items):
+        print(str(item))
+        if items=="":
+            break
+    print()
+def last(items, header=None):
+    if header != None:
+        print(header)
+    for item in (items):
+        print(str(item))
+        if items=="":
+            break
+    print()
+
+fruits = ["Bannana", "Kiwi", "Apple", "Pinnaple", "Peach", "Watermelon"]
+
+print_list(fruits, "FRUITS")
+
+fruits.sort()
+
+print_list(fruits, "FRUITS sorted")
+
+first(fruits[0:1:1], "First sorted fruit: ")
+
+first(fruits[-1:-2:-1], "Last sorted fruit: ")
+      
+fruits.reverse()
+
+print_list(fruits, "FRUITS reversed")
+
+first(fruits[0:1:1], "First reversed fruit: ")
+
+first(fruits[-1:-2:-1], "Last reversed fruit: ")
+
+fruits.clear()
+
+print_list(fruits, "No FRUITS :(")
+
+print()
+input("Press return to continue ...")
